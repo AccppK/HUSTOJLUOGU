@@ -5,7 +5,7 @@ import requests
 from pathlib import Path
 
 class LuoguScraper:
-    """HUSTOJLUOGU -- BY PERKICA"""
+    """GET LUOGU PROBLEM(防风控模式) -- BY PERKICA"""
     
     def __init__(self, cookie):
         self.session = requests.Session()
@@ -272,7 +272,7 @@ def main():
             else:
                 print("\n✗ 爬取失败")
             
-            time.sleep(1)
+            time.sleep(0.2)
         
         elif choice == '2':
             range_input = input("请输入题号范围 (如 P1001-P1004): ").strip()
@@ -313,7 +313,7 @@ def main():
                     print("  ✗ 爬取失败")
                     failed_pids.append(pid)
                 
-                time.sleep(1)
+                time.sleep(0.2)
             
             # 合并导出成一个XML文件
             if success_problems:
